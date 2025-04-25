@@ -1033,36 +1033,78 @@ p {
   }
 }
 
+
+
 .footer-banner {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff3e1;
-  flex-wrap: nowrap;
-  text-align: center;
-  position: relative;
-  width: 100%;
-}
-
-.slide-text {
-  white-space: nowrap; 
-  padding: 10px 20px;
-  color: #8a1538;
-  font-size: 26px;
-
-  display: inline-block;
-  animation: scroll-left 15s linear infinite;  
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%); 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff3e1;
+    flex-wrap: nowrap;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
   }
-  100% {
-    transform: translateX(-100%);  
+  
+  .slide-text {
+    white-space: nowrap;
+    padding: 10px 20px;
+    color: #8a1538;
+    font-size: 26px;
+    display: inline-block;
+    animation: scroll-left 15s linear infinite;
   }
-}
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-banner {
+      padding: 10px;
+    }
+  
+    .slide-text {
+      font-size: 20px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-banner {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .slide-text {
+      font-size: 18px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .slide-text img {
+      width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
 
 .section {
   padding: 60px 20px;
@@ -1131,7 +1173,6 @@ p {
 
 .course-grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
   align-items: stretch;
